@@ -24,6 +24,15 @@ def test_login():
 '''
 $ curl -sSL https://install.python-poetry.org | python3 -
 $ export PATH="$HOME/.local/bin:$PATH"
+
+Note: Need to add the following rows to /private/etc/bashrc file, it will allow to skip previous command in future
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
 $ poetry init
 $ poetry add pytest
 $ poetry add selene==2.0.0b14
