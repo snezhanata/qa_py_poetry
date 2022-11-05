@@ -26,6 +26,6 @@ $ curl -sSL https://install.python-poetry.org | python3 -
 $ export PATH="$HOME/.local/bin:$PATH"
 $ poetry init
 $ poetry add pytest
-$ poetry add selene
+$ poetry add selene==2.0.0b14
 $ poetry add pylint --group dev
 '''
